@@ -6,78 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-Basics</title>
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 
 <body>
-    <h1>CSS-Basics</h1>
-    <p>This page contains relevant information I regularly looked up, when learning to use HTML</p>
+    <h1 id="header">CSS-Basics</h1>
+    <p class="paragraph">This page contains relevant information I regularly looked up, when learning to use HTML</p>
 
-    <h2>Table of Contents</h2>
-    <ul>
-        <li>
-            <p><a href=#selectors>Selectors</a></p>
-        </li>
-        <li>
-            <p><a href=#basic-properties>Basic Properties</a></p>
-        </li>
-        <li>
-            <p><a href=#cascade>The Cascade of CSS</a></p>
-        </li>
-        <li>
-            <p><a href=#css-to-html>Adding CSS to HTML</a></p>
-        </li>
-    </ul>
+    <div class="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>
+                <p><a href=#selectors>Selectors</a></p>
+            </li>
+            <li>
+                <p><a href=#basic-properties>Basic Properties</a></p>
+            </li>
+            <li>
+                <p><a href=#cascade>The Cascade of CSS</a></p>
+            </li>
+            <li>
+                <p><a href=#css-to-html>Adding CSS to HTML</a></p>
+            </li>
+            <li>
+                <p><a href=#fonts>Fonts</a></p>
+            </li>
+        </ul>
+    </div>
 
 
     <h3>Basic Syntax</h3>
     <img src="../img/css_basic_syntax.jpg">
     <h3 id="selectors">Selectors</h3>
-    <h4>Universal selectors</h4>
-    <p>For example: * {color: purple;}</p>
-    <p>Selects elements of any type - just a simple "*"</p>
+    <div class="paragraph">
+        <h4>Universal selectors</h4>
+        <p>For example: * {color: purple;}</p>
+        <p>Selects elements of any type - just a simple "*"</p>
+    </div>
 
     <h4>Type Selectors</h4>
+    <div class="paragraph">
     <p>for example: div {}</p>
     <p>Selects all elements from the given element type</p>
+    </div>
 
     <h4>Class Selectors</h4>
+    <div class="paragraph">
     <p>For example: .class-name {}</p>
     <p>A period followed by the case-sensitive value of the class attribute.</p>
     <p>Selects all elements with the given class</p>
     <p>To add a class to an HTML-element, just add the attribute "class="class-name""</p>
+    </div>
 
+    <div class="paragraph">
     <h4>ID Selectors</h4>
     <p>For example: #title {}</p>
     <p>A hashtag followed by the case-sensitive value of the class attribute.</p>
     <p>To add an ID to an HTML-element --> attribute id="ID-name"</p>
     <p>Don't overuse! Mostly classes will suffice. One use case is to redirect to a section on the current page.</p>
+    </div>
 
     <h4>Grouping Selectors</h4>
+    <div class="paragraph">
     <p>For example:</p>
     <p>.read,</p>
     <p>.unread {color:white;}</p>
     <p>Now read and unread have the color white --> after that you can give .read and .unread additional unique
         declarations.</p>
+    </div>
 
     <h4>Chaining Selectors</h4>
+    <div class="paragraph">
     <p>Give a html-Element multiple classes by dividing them with a space, for example: class="subsection header" -->
         belongs to the classes "subsection" and "header"</p>
     <p>Now if we only want to give a rule to an element that has the subsection-class as well as the "header"-class, we
         would have to define our CSS as ".subsection.header {}"</p>
     <p>Works for chaining any combination of selectors, except for more than one type selector. To chain class and
         ID-selectors you would have to write: .subsection#preview</p>
+    </div>
 
     <h4>Descendant Combinator</h4>
+    <div class="paragraph">
     <p>.ancestor .child {}</p>
     <p>This would choose any child-class that has a .ancestor class as parent (no matter how deep .child is nested
         relatively to .ancestor</p>
-    
+    </div>
+
     <h4>Child combinator ></h4>
+    <div class="paragraph">
     <p>.class > . second-class{}</p>
     <p>second-class needs to be the immediate child of class</p>
+    </div>
 
     <h3 id="basic-properties">Basic Properties</h3>
     <h4>Color and Background-Color</h4>
+    <div class="paragraph">
     <ul>
         <li>per Hex: color: #1100ff</li>
         <li>Hex with Transparency: #1100ff80 --> add two additional digits between 00 and FF</li>
@@ -85,53 +108,110 @@
         <li>per rgb alpha: rgba(255, 0, 0, 0.3) --> number between 0.0 (fully transparent) and 1.0 for alpha</li>
         <li>per hsl: color: hsl(15, 82%, 56%)</li>
         <li>per hsl alpha hsla(15, 82%, 56%, 0.3</li>
-        <li>predefined: there are 140 predefined colors in html and CSS (e.g. blue, red, coral, ...) see <a href="https://www.w3schools.com/colors/colors_names.asp">here.</a></li>
+        <li>predefined: there are 140 predefined colors in html and CSS (e.g. blue, red, coral, ...) see <a
+                href="https://www.w3schools.com/colors/colors_names.asp">here.</a></li>
     </ul>
+    </div>
     <h4>Typography Basics and Text-Align</h4>
+    <div class="paragraph">
     <ul>
-        <li>font-family --> single value or comma separated list. If first font can't be found, the second one is used etc. Either the font gets a "font family name" like "DejaVu Sans" or a "generic family name" like <em>sans-serif</em>. There should always be a <a href="https://www.w3.org/TR/CSS2/fonts.html">generic backup font.</a></li>
+        <li>font-family --> single value or comma separated list. If first font can't be found, the second one is used
+            etc. Either the font gets a "font family name" like "DejaVu Sans" or a "generic family name" like
+            <em>sans-serif</em>. There should always be a <a href="https://www.w3.org/TR/CSS2/fonts.html">generic backup
+                font.</a>
+        </li>
         <li>font-size --> e.g. font-size: 22px</li>
         <li>font-weight --> number between 1 and 1000 --> boldness (700 = bold), usually 100 up to 900 can be used</li>
-        <li>text-align --> start, end, center or justify and more; see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align?retiredLocale=de">here.</a></li>
+        <li>text-align --> start, end, center or justify and more; see <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align?retiredLocale=de">here.</a></li>
     </ul>
+    </div>
 
     <h4>Image Height and Width</h4>
+    <div class="paragraph">
     <p>For example height: auto; width: 500 px. That way the image keeps it proportions.</p>
     <p>Should always be included --> so the image takes it's space even if it needs some time to load.</p>
+    </div>
 
     <h3 id="cascade">The Cascade of CSS</h3>
     <h4>Specificity</h4>
+    <div class="paragraph">
     <p>A CSS declaration that is more specific will take precedence over less specific ones.</p>
     <ol>
         <li>ID selectors (most specific)</li>
         <li>Class selectors</li>
         <li>Type selectors</li>
     </ol>
+    </div>
 
     <h4>Inheritance</h4>
+    <div class="paragraph">
     <p>Children of an Element inherit it's properties, except when they are targeted directly</p>
+    </div>
 
     <h4>Rule Order</h4>
+    <div class="paragraph">
     <p>When no rule applies - the last defined element is the winner.</p>
+    </div>
 
     <h3 id="css-to-html">Adding CSS to HTML</h3>
     <h4>External CSS</h4>
-    <p>Most common - separate CSS file. Has to be linked inside the HTML's opening and closing head-tags with self-closing link-element (link rel="stylesheet" href="styles.css")</p>
+    <div class="paragraph">
+    <p>Most common - separate CSS file. Has to be linked inside the HTML's opening and closing head-tags with
+        self-closing link-element (link rel="stylesheet" href="styles.css")</p>
     <p>href --> absolute or relative link; rel --> defines the relationship between the HTML and linked file.</p>
-    <p>--> keeps HTML and CSS separated --> cleaner; only one place to edit CSS - handy for websites with many pages in similar styles</p>
+    <p>--> keeps HTML and CSS separated --> cleaner; only one place to edit CSS - handy for websites with many pages in
+        similar styles</p>
+    </div>
 
     <h4>Internal CSS</h4>
+    <div class="paragraph">
     <p>Adding CSS within the HTML-file --> Style-Element inside the head element with all the CSS for the page</p>
     <p>Can be useful for adding unique styles to a <em>single page</em>.</p>
+    </div>
 
     <h4>Inline CSS</h4>
-    <p>Add styles directly to HTML-Elements - not as recommended. Done by adding a style attribute to a element with all CSS-declarations separated by a semicolon. Selectors don't work.</p>
+    <div class="paragraph">
+    <p>Add styles directly to HTML-Elements - not as recommended. Done by adding a style attribute to a element with all
+        CSS-declarations separated by a semicolon. Selectors don't work.</p>
     <p>For <em>unique</em> style of a <em>single</em> element this might work However:.</p>
     <ul>
         <li>Gets messy with a lot of declarations.</li>
         <li>If a lot of elements have the same style --> lots of copy paste.</li>
         <li>Will override the other two methods (this can however be taken advantage of.).</li>
     </ul>
+    </div>
+    <a href="#header">Back to Top</a>
+
+    <h3 id="fonts">Fonts</h3>
+    <p class="paragraph">There are a lot of different fonts that can be used.</p>
+    <h4>Generic Font Families</h4>
+    <div class="paragraph">
+        <p>There are five generic font families in CSS</p>
+        <ul> <li style="font-family: serif;">Serif</li>
+            <li style="font-family: sans-serif;">Sans-serif</li>
+            <li style="font-family: monospace;">Monospace</li>
+            <li style="font-family: cursive;">Cursive</li>
+            <li style="font-family: fantasy;">Fantasy</li>
+        </ul>
+        <p>There are different fonts that belong to a font family. For example Arial belong so sans-serif. See also: <a href="https://www.w3schools.com/Css/css_font.asp">here.</a><br>
+        Set the font with the "font-family" property. You can set more than one font - if the first font is not available in the browser the next one will be chosen. The last font should always be a generic font like sans-serif. <br>
+        If a font has blanks in its name, it has to be written in quotes like "Times New Roman".<br>
+        There are some fonts that are installed in nearly every browser - so called "web-safe-fonts" - these are:<br>
+        <ul>
+            <li style="font-family: Arial;">Arial (sans-serif)</li>
+            <li style="font-family: Verdana;">Verdana (sans-serif)</li>
+            <li style="font-family: Tahoma;">Tahoma (sans-serif)</li>
+            <li style="font-family: 'Trebuchet MS';">Trebuchet MS (sans-serif)</li>
+            <li style="font-family: 'Times New Roman';">Times New Roman (serif)</li>
+            <li style="font-family: Georgia;">Georgia (serif)</li>
+            <li style="font-family: Garamond;">Garamond (serif)</li>
+            <li style="font-family: 'Courier New';">Courier New (monospace)</li>
+            <li style="font-family: 'Brush Script MT'">Brush Script MT (cursive)</li>
+        </ul>
+        </p>
+
+    </div>
 </body>
 
 </html>
