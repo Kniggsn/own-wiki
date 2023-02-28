@@ -31,6 +31,9 @@
             <li>
                 <p><a href=#fonts>Fonts</a></p>
             </li>
+            <li>
+                <p><a href=#css-cascade>The CSS cascade in detail</a></p>
+            </li>
         </ul>
     </div>
 
@@ -223,6 +226,37 @@
         </p>
 
     </div>
+
+    <h3 id="css-cascade">The CSS cascade</h3>
+    <p class="paragraph">Also see <a href="https://wattenberger.com/blog/css-cascade">here.</a></p>
+    <h4>1. - Importance</h4>
+    <div class="paragraph">
+        <ol>
+            <li>Transition --> rules for active transitions = most important</li>
+            <li>!important --> to the end of the declaration - will be prioritized</li>
+            <li>animation --> active animation rules</li>
+            <li>normal rules</li>
+        </ol>
+    </div>
+    <h4>2. Origin</h4>
+    <div class="paragraph">
+        <ol>
+            <li>website --> controlled by the website developer</li>
+            <li>user</li>
+            <li>broswer - e.g. default styles etc.</li>
+        </ol>
+    </div>
+    <h4>3. - Specifity</h4>
+    <div class="paragraph">
+        <ol>
+            <li>inline properties</li>
+            <li>layer --> new! soon layers of styles can be defined --> @layer one {} with declaration inside --> layer two will be defined after layer two - so it gets priority</li>
+            <li>id</li>
+            <li>class/attribute/pseudo-class</li>
+            <li>type/pseudo-element</li>
+        </ol>
+    </div>
+    <h4>4. - Order</h4>
     <a href="#header">Back to Top</a><br>
     <a href="../index.html">Back to Homepage</a>
 </body>
