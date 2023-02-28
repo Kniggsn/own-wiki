@@ -1,0 +1,25 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(255, 235, 205);
+}
+
+.paragraph {
+    background-color: rgb(236, 212, 177);
+}
+
+.table-of-contents {
+    background-color: rgb(219, 195, 184);
+    color: black;
+}
+
+img {
+    height: auto;
+    width: 350px;
+}
