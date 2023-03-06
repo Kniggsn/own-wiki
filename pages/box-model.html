@@ -49,18 +49,23 @@
         <ul>
             <li>box will break onto new line</li>
             <li>width and height are respected</li>
+            <li>by default uses all space available (from left to right)</li>
             <li>padding, margin and border will cause other elements to be pushed away from the box</li>
             <li>if width is not specified --> box will extend in inline direction to fill space available</li>
             <li>some elements like h1, p use block by default</li>
+            <li>by default block elements ar laid out in the block-flow-direction, which is based on the parents writing-mode</li>
+            <li>default writing-mode is horizontal-tb (top to bottom)</li>
         </ul>
         <p>If the outer display type is "inline", then:</p>
         <ul>
             <li>box will not break onto new line</li>
-            <li>width and height will not apply</li>
+            <li>width and height will not apply (exception: img-Element)</li>
             <li>vertical padding, margins and borders will apply, but not cause other inline boxes to move away from the
                 box</li>
             <li>horizontal padding etc. will apply and will cause other inline boxes to move away</li>
+            <li>in general you don't want to use padding or margin on inline elements</li>
             <li>default for a, span, em, strong, ...</li>
+    
         </ul>
     </div>
     <h4>Inner display type</h4>
@@ -77,6 +82,7 @@
             <li>special value of display - middleground between inline and block</li>
             <li>width and height are respected and padding etc. cause other elements to be pushed away from the box</li>
             <li>does not break onto a new line</li>
+            <li>better alternative than inline-block is mostly flexbox</li>
         </ul>
     </div>
 
