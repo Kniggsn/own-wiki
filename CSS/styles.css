@@ -62,7 +62,16 @@ h3, h4, h6 {
 
 img {
     height: auto;
-    width: 350px;
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 8px auto;
+    border-radius: 8px;
+}
+
+ul, ol {
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 
 a:link {
