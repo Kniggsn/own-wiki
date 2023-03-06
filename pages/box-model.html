@@ -17,8 +17,9 @@
         <p>The box model is used to put your Elements exactly where you want them to be.</p>
     </div>
     <hr>
-    <h3>The Basics</h3>
+
     <div class="paragraph">
+        <h3>The Basics</h3>
         <p>You can use <em>margin</em>, <em>padding</em> and <em>borders</em> to make sure elements are just the right
             size.<br>
             To get a grasp of how the box model works, you basically have to imagine every single HTML-element as a box.
@@ -28,10 +29,12 @@
             <li>padding - increase space between border of a box and content of box</li>
             <li>margin - increase space between borders of box and adjacent box. Can also be negative for overlapping.
             </li>
-            <li>margin between two objects is not summed up - instead the bigger one is chosen as space (only for vertical)(if one is
+            <li>margin between two objects is not summed up - instead the bigger one is chosen as space (only for
+                vertical)(if one is
                 negative and one is positive the negative one will be substracted from the total.</li>
-            <li>margin: margin top right bottom left --> to set e.g. 4 different margins</li>   
-            <li>if width is set to e.g. 980px and margin to "0 auto" --> specified width - left and right margins are automatically set</li>             
+            <li>margin: margin top right bottom left --> to set e.g. 4 different margins</li>
+            <li>if width is set to e.g. 980px and margin to "0 auto" --> specified width - left and right margins are
+                automatically set</li>
             <li>border - adds space between margin and padding</li>
             <li>outline --> A outline border is added around the actual border of an element to make it stand out.</li>
             <li>box-sizing: border-box - adjusts height/width of the actual content so that this size + padding + border
@@ -41,14 +44,19 @@
         <p style="padding: 30px; background-color: blue;">This is a paragraph with padding=30px</p>
         <p style="border: 10px dotted blue;">This is a paragraph with a colored and dotted 10px border</p>
         <p style="margin: 30px; border: 1px solid black;">This paragraph has a 30px margin and a 1px black border</p>
-        <p style="margin: 0 auto; border: 1px solid black; width: 300px">300 px width with auto-margin --> horizontally centered!</p>
+        <p style="margin: 0 auto; border: 1px solid black; width: 300px">300 px width with auto-margin --> horizontally
+            centered!</p>
     </div>
     <hr>
+
     <h3>Block and inline boxes</h3>
-    <div class="paragraph">There are several types of boxes. The type refers to how they behave in terms of page flow
-        and in relation to other boxes. Boxes have an inner and outer display type.</div>
-    <h4>Outer display type</h4>
     <div class="paragraph">
+
+        There are several types of boxes. The type refers to how they behave in terms of page flow
+        and in relation to other boxes. Boxes have an inner and outer display type.</div>
+
+    <div class="paragraph">
+        <h4>Outer display type</h4>
         <p>If the outer display type is "block", then:</p>
         <ul>
             <li>box will break onto new line</li>
@@ -57,7 +65,8 @@
             <li>padding, margin and border will cause other elements to be pushed away from the box</li>
             <li>if width is not specified --> box will extend in inline direction to fill space available</li>
             <li>some elements like h1, p use block by default</li>
-            <li>by default block elements ar laid out in the block-flow-direction, which is based on the parents writing-mode</li>
+            <li>by default block elements ar laid out in the block-flow-direction, which is based on the parents
+                writing-mode</li>
             <li>default writing-mode is horizontal-tb (top to bottom)</li>
         </ul>
         <p>If the outer display type is "inline", then:</p>
@@ -69,18 +78,20 @@
             <li>horizontal padding etc. will apply and will cause other inline boxes to move away</li>
             <li>in general you don't want to use padding or margin on inline elements</li>
             <li>default for a, span, em, strong, ...</li>
-    
+
         </ul>
     </div>
-    <h4>Inner display type</h4>
+
     <div class="paragraph">
+        <h4>Inner display type</h4>
         <ul>
             <li>defines how elements inside the box are laid out</li>
             <li>you can change the type in CSS with the property "display: inline"</li>
         </ul>
     </div>
-    <h4>Using display: inline-block</h4>
+
     <div class="paragraph">
+        <h4>Using display: inline-block</h4>
         <ul>
             <li>display: inline-block</li>
             <li>special value of display - middleground between inline and block</li>

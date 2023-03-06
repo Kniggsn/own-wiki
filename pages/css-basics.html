@@ -41,39 +41,48 @@
 
     <hr>
     <h3>Basic Syntax</h3>
-    <img src="../img/css-basics/css_basic_syntax.jpg" alt="The basic CSS-Syntax">
+    <div class="paragraph">
+
+        <img src="../img/css-basics/css_basic_syntax.jpg" alt="The basic CSS-Syntax">
+    </div>
     <hr>
+
     <h3 id="selectors">Selectors</h3>
     <div class="paragraph">
+
         <h4>Universal selectors</h4>
         <p>For example: * {color: purple;}</p>
         <p>Selects elements of any type - just a simple "*"</p>
     </div>
 
-    <h4>Type Selectors</h4>
+
     <div class="paragraph">
+        <h4>Type Selectors</h4>
         <p>for example: div {}</p>
         <p>Selects all elements from the given element type</p>
     </div>
 
-    <h4>Class Selectors</h4>
+
     <div class="paragraph">
+        <h4>Class Selectors</h4>
         <p>For example: .class-name {}</p>
         <p>A period followed by the case-sensitive value of the class attribute.</p>
         <p>Selects all elements with the given class</p>
         <p>To add a class to an HTML-element, just add the attribute "class="class-name""</p>
     </div>
 
-    <h4>ID Selectors</h4>
     <div class="paragraph">
+
+        <h4>ID Selectors</h4>
         <p>For example: #title {}</p>
         <p>A hashtag followed by the case-sensitive value of the class attribute.</p>
         <p>To add an ID to an HTML-element --> attribute id="ID-name"</p>
         <p>Don't overuse! Mostly classes will suffice. One use case is to redirect to a section on the current page.</p>
     </div>
 
-    <h4>Grouping Selectors</h4>
+
     <div class="paragraph">
+        <h4>Grouping Selectors</h4>
         <p>For example:</p>
         <p>.read,</p>
         <p>.unread {color:white;}</p>
@@ -81,8 +90,9 @@
             declarations.</p>
     </div>
 
-    <h4>Chaining Selectors</h4>
+
     <div class="paragraph">
+        <h4>Chaining Selectors</h4>
         <p>Give a html-Element multiple classes by dividing them with a space, for example: class="subsection header"
             -->
             belongs to the classes "subsection" and "header"</p>
@@ -93,22 +103,26 @@
             ID-selectors you would have to write: .subsection#preview</p>
     </div>
 
-    <h4>Descendant Combinator</h4>
+
     <div class="paragraph">
+        <h4>Descendant Combinator</h4>
         <p>.ancestor .child {}</p>
         <p>This would choose any child-class that has a .ancestor class as parent (no matter how deep .child is nested
             relatively to .ancestor</p>
     </div>
 
-    <h4>Child combinator ></h4>
+
     <div class="paragraph">
+        <h4>Child combinator ></h4>
         <p>.class > . second-class{}</p>
         <p>second-class needs to be the immediate child of class</p>
     </div>
     <hr>
+
     <h3 id="basic-properties">Basic Properties</h3>
-    <h4>Color and Background-Color</h4>
+
     <div class="paragraph">
+        <h4>Color and Background-Color</h4>
         <ul>
             <li>per Hex: color: #1100ff</li>
             <li>Hex with Transparency: #1100ff80 --> add two additional digits between 00 and FF</li>
@@ -120,8 +134,9 @@
                     href="https://www.w3schools.com/colors/colors_names.asp">here.</a></li>
         </ul>
     </div>
-    <h4>Typography Basics and Text-Align</h4>
+
     <div class="paragraph">
+        <h4>Typography Basics and Text-Align</h4>
         <ul>
             <li>font-family --> single value or comma separated list. If first font can't be found, the second one is
                 used
@@ -138,15 +153,17 @@
         </ul>
     </div>
 
-    <h4>Image Height and Width</h4>
+
     <div class="paragraph">
+        <h4>Image Height and Width</h4>
         <p>For example height: auto; width: 500 px. That way the image keeps it proportions.</p>
         <p>Should always be included --> so the image takes it's space even if it needs some time to load.</p>
     </div>
     <hr>
+
     <h3 id="cascade">The Cascade of CSS</h3>
-    <h4>Specificity</h4>
     <div class="paragraph">
+        <h4>Specificity</h4>
         <p>A CSS declaration that is more specific will take precedence over less specific ones.</p>
         <ol>
             <li>ID selectors (most specific)</li>
@@ -155,19 +172,22 @@
         </ol>
     </div>
 
-    <h4>Inheritance</h4>
+
     <div class="paragraph">
+        <h4>Inheritance</h4>
         <p>Children of an Element inherit it's properties, except when they are targeted directly</p>
     </div>
 
-    <h4>Rule Order</h4>
     <div class="paragraph">
+
+        <h4>Rule Order</h4>
         <p>When no rule applies - the last defined element is the winner.</p>
     </div>
     <hr>
     <h3 id="css-to-html">Adding CSS to HTML</h3>
-    <h4>External CSS</h4>
+
     <div class="paragraph">
+        <h4>External CSS</h4>
         <p>Most common - separate CSS file. Has to be linked inside the HTML's opening and closing head-tags with
             self-closing link-element (link rel="stylesheet" href="styles.css")</p>
         <p>href --> absolute or relative link; rel --> defines the relationship between the HTML and linked file.</p>
@@ -176,14 +196,16 @@
             similar styles</p>
     </div>
 
-    <h4>Internal CSS</h4>
+
     <div class="paragraph">
+        <h4>Internal CSS</h4>
         <p>Adding CSS within the HTML-file --> Style-Element inside the head element with all the CSS for the page</p>
         <p>Can be useful for adding unique styles to a <em>single page</em>.</p>
     </div>
 
-    <h4>Inline CSS</h4>
+
     <div class="paragraph">
+        <h4>Inline CSS</h4>
         <p>Add styles directly to HTML-Elements - not as recommended. Done by adding a style attribute to a element with
             all
             CSS-declarations separated by a semicolon. Selectors don't work.</p>
@@ -197,8 +219,9 @@
     <hr>
 
     <h3 id="fonts">Fonts</h3>
-    <h4>Choosing Font Families</h4>
+
     <div class="paragraph">
+        <h4>Choosing Font Families</h4>
         <p>There are five generic font families in CSS</p>
         <ul>
             <li style="font-family: serif;">Serif</li>
@@ -232,8 +255,9 @@
     <hr>
     <h3 id="css-cascade">The CSS cascade</h3>
     <p class="paragraph">Also see <a href="https://wattenberger.com/blog/css-cascade">here.</a></p>
-    <h4>1. - Importance</h4>
+
     <div class="paragraph">
+        <h4>1. - Importance</h4>
         <ol>
             <li>Transition --> rules for active transitions = most important</li>
             <li>!important --> to the end of the declaration - will be prioritized</li>
@@ -241,16 +265,18 @@
             <li>normal rules</li>
         </ol>
     </div>
-    <h4>2. Origin</h4>
+
     <div class="paragraph">
+        <h4>2. Origin</h4>
         <ol>
             <li>website --> controlled by the website developer</li>
             <li>user</li>
             <li>broswer - e.g. default styles etc.</li>
         </ol>
     </div>
-    <h4>3. - Specifity</h4>
+
     <div class="paragraph">
+        <h4>3. - Specifity</h4>
         <ol>
             <li>inline properties</li>
             <li>layer --> new! soon layers of styles can be defined --> @layer one {} with declaration inside --> layer
@@ -260,10 +286,14 @@
             <li>type/pseudo-element</li>
         </ol>
     </div>
-    <h4>4. - Order</h4>
+    <div class="paragraph">
+        <h4>4. - Order</h4>
+    </div>
+    
     <hr>
     <h3>Absolute and relative Units</h3>
     <div class="paragraph">
+        <h4>The different unit types</h4>
         <p>There are absolute and relative units in CSS. <br>
             Relative units are <em>relative</em> to for example the viewports size or to the size of the parent
             element.<br>
