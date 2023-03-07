@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Flexbox</title>
+</head>
+
+<body>
+    <hr>
+    <h1>Flexbox</h1>
+    <hr>
+    <div class="paragraph">
+        <h3>What is flexbox?</h3>
+        <p>Flexbox is a relatively new way of manipulating elements in CSS. It's used to position elements with so
+            called <em>flex containers</em> and <em>flex items</em>. <br>
+        </p>
+    </div>
+    <div class="paragraph">
+        <h4>The Basics</h4>
+        <p>For "flexboxing" it is important to always see elements as containers and the items of the container.</p>
+        <ul>
+            <li>This for example</li>
+            <li>is a list with three items, that are by</li>
+            <li>default Block-elements. They are inside a "ul"-Element which is the container.</li>
+        </ul>
+        <div style="display: flex;">
+            <p style="border: 1px solid white;">This however</p>
+            <p style="border: 1px solid white;">are three p elements, and the "display" property </p>
+            <p style="border: 1px solid white;">of the Container-Element (this time a div) has been set to flex</p>
+        </div>
+        <p>You see, that the p elements inside a Container with flex don't start a new line anymore despite being
+            block-Elements.<br>
+            So long story short: A flex container is any element that has <code>display: flex</code> as a property.<br>
+            A flex item is any element inside a flex-container.</p>
+        <a href="../img/flexbox/flex_box_basics_01.png"><img src="../img/flexbox/flex_box_basics_01.png"
+                alt="Visualisation of flex containers and items"></a>
+        <p>Flex items can however also be flex containers!</p>
+        <a href="../img/flexbox/flex_box_basics_02.png"><img src="../img/flexbox/flex_box_basics_02.png"
+                alt="Visualisation of flex containers inside of a flex container"></a>
+        <p>Modern websites mostly use flexbox. However, older websites used so called <em>Floats</em>.</p>
+    </div>
+    <hr>
+    <h3>Aligning Items</h3>
+    <div class="paragraph">
+        <h4>Aligning items with Flexbox - Flex-Containers</h4>
+        After giving the flex container the "flex" property, you can tell the container how to align it's content.
+        <ul>
+            <li><code>justify content: center/flex-start/flex-end</code> - aligns the items as chosen</li>
+            <li><code>justify content: space-around/space between</code> - useful with multiple items --> give the
+                container a width and these properties will position the items on the page equally (either with the came
+                space at the left and right of the outer elements or without)</li>
+            <li><code>align-items</code> - can be used for <em>vertical</em> alignment if the container has a specified
+                height See this example image:
+                <a href="../img/flexbox/flex_box_basics_03.png"><img src="../img/flexbox/flex_box_basics_03.png"
+                        alt="Align-Items property of flex containers"></a>
+            </li>
+            <li><code>flex-wrap: wrap/nowrap</code> - with wrap activated items will automatically start a new line, if
+                they have a defined width and there are too many items to be fit in one line of the container <a
+                    href="../img/flexbox/flex_box_basics_04.png"><img src="../img/flexbox/flex_box_basics_04.png"
+                        alt="Example image for wrapping with flexbox"></a></li>
+            <li><code>flex-direction: row/column/row-reverse/column-reverse</code> - renders items horizontally or
+                vertically - justify-content
+                changes the <strong>vertical</strong> alignment when the flex-direction is column</li>
+    </div>
+    <div class="paragraph">
+        <h4>Aligning items with Flexbox - Flex-Items</h4>
+        It's also possible to manipulate individual items of a flex-container.
+        <ul>
+            <li><code>order: 0/-1/1/...</code> - positions the item at the defined position</li>
+            <li><code>align-self: flex-end</code> - positions the item at the bottom of the container</li>
+            <li><code>flex: 1/2/3/...</code> - makes items expand it's width - if all items have a flex of 1, they
+                will fill up their container and all have an equal width - items with a higher with will grow bigger
+                than the other items</li>
+            <li>you can also define static item widths --> <code>flex: initial</code> --> these items will keep their
+                defined width - should also work by just not defining the "flex" property for the items that should not
+                be responsive</li>
+            <li><code>flex</code> is the shorthand for flex-grow, flex-shrink and flex-basis - when setting flex: 0 it
+                is the shorthand for flex: 0 0 1</li>
+            <li><code>flex-grow</code> --> if we give two items a value of 1 and one item the value of 2, the item with
+                the value of two will be twice as big as the other items</li>
+            <li><code>flex-shrink</code> --> same as grow, just with shrinking</li>
+            <li><code>baseline: auto</code> --> if we have a set width for items, they will try to get that width first
+                and after that rules like "flex-grow" are applied if possible - shrink is applied if the items don't
+                have enough space when shrinking the view (so the item with a higher value for shrinking will be
+                smaller) - growing is applied if there is enough space for the items to fill there set value for width
+            </li>
+            <li><code>flex: initial</code> - is equivalent to flex: 0 1 auto --> sizes based on width/height - so inflexible when there is free space, but allows to shrink</li>
+            <li><code>flex: auto</code> - is equivalent to flex: 1 1 auto --> sizes based on width/heigth, but makes items fully flexible --> absorb any space along the main axis</li>
+            <li><code>flex: none</code> - is equivalent to flex: 1 1 0 --> not flexible</li>
+            <li><code>flex: 3</code> - is equivalent to flex: 4 1 0</li>
+            <li><code>min-width/min-height</code> - stes the items minimum width/height --> flex items can shrink below their minimum content size</li>
+            <li>It's often easier to see the shorthand property as "flex: [max] [min] [ideal size]</li>
+            <li>If I have for example three flexitems with one of them having flex: 1 but there is much more content in one of the items with flex: 1, then the flex: 3 item won't be the biggest</li>
+            
+        </ul>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
