@@ -65,6 +65,10 @@
             <li><code>flex-direction: row/column/row-reverse/column-reverse</code> - renders items horizontally or
                 vertically - justify-content
                 changes the <strong>vertical</strong> alignment when the flex-direction is column</li>
+            <li><code>align-content</code> - when flex-wrap is used - as soon as content is breaking onto a new line, we
+                get a second main axis - with align-content we can use the same properties justify-content has, just for
+                the two or more main axes! (e.g. space-around etc.)</li>
+            <li><code>gap: 8px</code> - Adds 8px of space between all items</li>
     </div>
     <div class="paragraph">
         <h4>Aligning items with Flexbox - Flex-Items</h4>
@@ -88,14 +92,18 @@
                 have enough space when shrinking the view (so the item with a higher value for shrinking will be
                 smaller) - growing is applied if there is enough space for the items to fill there set value for width
             </li>
-            <li><code>flex: initial</code> - is equivalent to flex: 0 1 auto --> sizes based on width/height - so inflexible when there is free space, but allows to shrink</li>
-            <li><code>flex: auto</code> - is equivalent to flex: 1 1 auto --> sizes based on width/heigth, but makes items fully flexible --> absorb any space along the main axis</li>
+            <li><code>flex: initial</code> - is equivalent to flex: 0 1 auto --> sizes based on width/height - so
+                inflexible when there is free space, but allows to shrink</li>
+            <li><code>flex: auto</code> - is equivalent to flex: 1 1 auto --> sizes based on width/heigth, but makes
+                items fully flexible --> absorb any space along the main axis</li>
             <li><code>flex: none</code> - is equivalent to flex: 1 1 0 --> not flexible</li>
             <li><code>flex: 3</code> - is equivalent to flex: 4 1 0</li>
-            <li><code>min-width/min-height</code> - stes the items minimum width/height --> flex items can shrink below their minimum content size</li>
+            <li><code>min-width/min-height</code> - stes the items minimum width/height --> flex items can shrink below
+                their minimum content size</li>
             <li>It's often easier to see the shorthand property as "flex: [max] [min] [ideal size]</li>
-            <li>If I have for example three flexitems with one of them having flex: 1 but there is much more content in one of the items with flex: 1, then the flex: 3 item won't be the biggest</li>
-            
+            <li>If I have for example three flexitems with one of them having flex: 1 but there is much more content in
+                one of the items with flex: 1, then the flex: 3 item won't be the biggest</li>
+
         </ul>
 
         </ul>
