@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+    .box-model-container {
+        padding: 16px;
+        border: 4px solid black;
+        margin: 32px auto;
+        width: 300px;
+
+    }
+
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +51,14 @@
             <li>box-sizing: border-box - adjusts height/width of the actual content so that this size + padding + border
                 are the size that's set in the width/height property - also called "alternative box model"</li>
         </ul>
-        <img src="../img/box-model/box-model-example-image.png" alt="Image to visualize padding, margin and border.">
+        <div class="box-model-container">
+            <p>This is an example to show off the box model.</p>
+            <ul>
+                <li>The space between the text and the edge of the box is padding.</li>
+                <li>The the black outline around the text is border.</li>
+                <li>the space between this box and the text above and below is margin.</li>
+            </ul>
+        </div>
         <p style="padding: 30px; background-color: blue;">This is a paragraph with padding=30px</p>
         <p style="border: 10px dotted blue;">This is a paragraph with a colored and dotted 10px border</p>
         <p style="margin: 30px; border: 1px solid black;">This paragraph has a 30px margin and a 1px black border</p>
