@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Javascript</title>
+
+</head>
+
+<body>
+    <hr>
+    <h1 id="header">Javascript</h1>
+    <hr>
+
+    <h2>The Basics</h2>
+    <div class="paragraph">
+        <h3>How to run Javascript-Code</h3>
+        <ul>
+            <li>Via the browser --> just use the "script" Element</li>
+            <li>Via an external script --> like with CSS files --> use the Script Element and link the Javascript file
+                with the src-attribute</li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3>Variables</h3>
+        <ul>
+            <li>basically "storage containers" for data</li>
+            <li>until recently the key word "var" was used to create a variable</li>
+            <li>the new way to create variables it the "let" keyword, e.g. "let message" or even "let message = 'hello
+                world!'"</li>
+            <li>the new way to create a constant is the "const" keyword</li>
+            <li>It's possible to declare multiple variables in one line - it is however not recommended</li>
+            <li>There is a slight difference between var and let - just use let for now</li>
+            <li>A variable can only be declared one - using the "let" keyword on an already existing variable will cause
+                an error</li>
+        </ul>
+
+        <h4>Naming the variable</h4>
+        <ul>
+            <li>camelCase is widely used</li>
+            <li>name must contain only letters, digits, $ or _</li>
+            <li>first character must not be a digit</li>
+            <li>case sensitive</li>
+            <li>there are reserved names that can't be used (e.g. let, return, ...)</li>
+            <li>constants that ar aliases for difficulty to remember values --> capital letters and underscore, e.g.
+                "COLOR_RED"</li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3>Numbers</h3>
+        <ul>
+            <li>only one type of number in JS --> can be written with or without decimals</li>
+            <li>numbers are always 64bit floating point</li>
+            <li>Other types of number would be:
+                <ul>
+                    <li>Integers --> floating-point without a fraction - negative or positive</li>
+                    <li>Floats --> floating point numbers - have a decimal point</li>
+                    <li>Doubles --> Special type of float with higher precision</li>
+                </ul>
+            </li>
+            <li>very large or small numbers can be written with exponent notation --> e.g. 123e5 (=123*10⁵)</li>
+            <li>integers are accurate up to 15 digits</li>
+            <li>maximum number of decimals is 17</li>
+            <li>floating point arithmethic is not always 100 % accurate --> 0.2 + 0.1 = 0.30000000000000004</li>
+            <li>to solve this it can help to multiply and divide (0,2+0,1)*10/10 = 0,3</li>
+            <li>if a number and a string is added - the result will be a string concatenation - 10 + "20" = "1020" or 20
+                + 40 + "6" = "606"</li>
+            <li>JS will however try to convert strings with numeric content --> "10" * "20" = 200 --> works with
+                everthing besides "+"</li>
+            <li>Trying to do arithmetic with a non-numeric string will result in "NaN" (Not a Number)</li>
+            <li>Infinity --> will be returned if a number is calculated outside the largest possible number or by
+                division by zero</li>
+            <li>number that starts with "0x" is interpreted as hexadecimal --> 0xFF = 255</li>
+            <li>by default numbers are displayed as base 10 decimals - use toString(16) for output as hexadecimal (or
+                another number - highest possible is 32)</li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3>Arithmethic Operators"</h3>
+        <ul>
+            <li>+ - Addition</li>
+            <li>- - Substraction</li>
+            <li>* - Multiplication</li>
+            <li>** - Exponentiation</li>
+            <li>/ - Division</li>
+            <li>% - Remainder (Modulus)</li>
+            <li>++ - Increment</li>
+            <li>++variable --> increments variable and then returns the incremented variable</li>
+            <li>variable++ --> returns the variable and then increments it by one</li>
+            <li>-- - Decrement</li>
+            <li>+ is the operator - the number for example is the operand</li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3> Build in Functions and Methods</h3>
+        <ul>
+            <li>console.log() --> print something into the developer console</li>
+            <li>alert(message) --> creates a popup with the message</li>
+            <li>isNaN(x) --> checks of x is NaN, returns bool</li>
+            <li>typeof NaN --> is a operator --> returns a string of the type of the operand's values --> in this
+                example "number"</li>
+            <li>number.toFixed(2) --> rounds an value of type number to two decimal places</li>
+            <li>Number(string) --> convert String to number</li>
+            <li>number.toString --> Method of number, converts it to string</li>
+            <script>
+                console.log("Hello, World!");
+                message = "Hello world!";
+                // alert(message);
+            </script>
+        </ul>
+    </div>
+    <div class="paragraph">
+        <h3>Operators</h3>
+        <ul>
+            <li>unary --> an operator with a single operand (e.g. -1)</li>
+            <li>binary --> an operator with two operands</li>
+            <li>=== - strict equality</li>
+            <li>!== - Strict non euality</li>
+            <li>== - non-strict quality (checks if value identical - but not if datatype --> not recommended)</li>
+            <li>
+                < or> - less or more than</or>
+            </li>
+            <li>
+                <= or>= - Greater/Less than or qual to
+            </li>
+            <li>unary + - e.g. +true --> converts to a number, in this case 1 (same as Number())</li>
+        </ul>
+
+        <h3>Bitwise Operators</h3>
+        <ul>
+            <li>AND (&)</li>
+            <li>OR (|)</li>
+            <li>XOR (^)</li>
+            <li>some more</li>
+            <li>used rarely when needed to fiddle with the numbers</li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3>Datatypes</h3>
+        <ul>
+            <li><strong>Strings</strong>
+                <ul>
+                    <li>basically a piece of text</li>
+                    <li>To signal the browser that the datatype is a string, you have to put the value into single or
+                        double quotes (stick to one of them!)</li>
+                    <li>To use a single quote inside of an single-quoted string you have to escape the single quote with
+                        a backslash</li>
+                    <li>You can put variables in your string with ${variable}</li>
+                </ul>
+
+                <h4>String methods and properties</h4>
+                <ul>
+                    <li>string.length --> length of the string</li>
+                    <li>string.slice(start-index, end-index) --> returns slice of original string (end-index not included)</li>
+                    <li>string.slice(start) --> returns sliced string (start index until end)</li>
+                    <li>string.slice(-12) --> negativ indices are counted from the end</li>
+                    <li>string.substring(start, end) - same as slice - differenc: negativ numbers are treated as 0</li>
+                    <li>string.substr(start, length) --> if length is not specified, the string from the start index on will be returned</li>
+                    <li>string.replace("text to be replaced", "new text") - replaces text --> does NOT replace the original string but returns a new string; only the first match is replaced</li>
+                    <li>string.replaceAll(old text, new text) - if a RegEx is used here, the g flag has to be set</li>
+                    <li>RegEx can be specified in the following form: /pattern/modifiers - without quotes - also see <a href="https://www.w3schools.com/js/js_regexp.asp">here</a></li>
+                    <li>toLowerCase(); toUpperCase() --> returns string as expected</li>
+                    <li>text1.concat(" ", text2) --> "text1 text2"</li>
+                    <li>text.trim() --> removes whitespaces from both sides of the string (there is also trimStart(), trimEnd()</li>
+                    <li>text.padStart(6, "x") --> adds 6 times an x on the left side of the string</li>
+                    <li>text.charAt(index) --> returns char at index (if not found --> empty string)</li>
+                    <li>text[index] --> basically same, but returns undefined if not found (read only!)</li>
+                    <li>text.charCodeAt(index) --> returns unicode of character</li>
+                    <li>text.split("separator") --> returns an array of the string, splitted at the specified separator</li>
+                    <li>See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">here</a> for some more String methods and properties</li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="paragraph">
+        <h3>Conditionals</h3>
+        <ul>
+            <li>All comparisons return a boolean value (true or false)</li>
+            <li>String comparison --> done by lexicographical order (B > A; strings are compared letter by letter)</li>
+            <li>comparison of different types --> e.g. "2" > 1 --> true - JS converts "2" to 2</li>
+            <li>mathematical comparisons --> null gets converted to 0; undefined to NaN</li>
+            <li>but equality check (==) --> null won't be converted</li>
+            <li>undefined = null --> true - any other comparison with undefined will return false</li>
+            <li>if, else, else if --> checks if a conditions is true and does something else if not</li>
+            <li>switch(expression) {case: choice a: code; break; ... default: code} --> checks every defined case - default is run if no case is truthy</li>
+            <li>Ternary operator --> condition ? run this code if true : else run this code --> smaller than if...else - should be used to return one value or another (e.g. when asigning a value to a const)--> can also be chained!
+            <li>|| --> OR; && --> AND, ! --> NOT, ?? --> Nullish Coalescing</li>
+            <ul>
+                <li>OR --> returns first truthy value (true, 1, ...) or the last if none is found (e.g. false, 1, undefined)</li>
+                <li>AND --> finds first falsy value, returns last one if none is found; has a higher precedence than OR</li>
+                <li>! --> Converts operand to boolean and than inverts it - a !! can be used to convert to boolean (better: use Boolean()) - has highest precedence</li>
+            </ul>
+        </ul>
+    </div>
+    <hr>
+    <h2>Developer Tools</h2>
+    <div class="paragraph">
+        <ul>Chrome Menu --> More Tools --> Developer Tools</ul>
+    </div>
+
+</body>
+
+</html>

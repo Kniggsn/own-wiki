@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        alert("somethng");
+        let inputNumber1 = prompt("Please enter a number");
+        let inputNumber2 = prompt("Please enter another number!");
+        let inputWord = prompt("Please enter a word!");
+
+        alert(`The first number + 7 euqals ${add7(inputNumber1)} and the second number + 7 equals ${add7(inputNumber2)}`);
+        alert(`The factor of both entered numbers is ${multiplyTwoNumber(inputNumber1, inputNumber2)}`);
+        alert(`If you capitalize ${inputWord} you get ${getCapitalizedWord(inputWord)}. The last letter of this word is ${getLastLetter(inputWord)}`);
+        
+        
+        function add7 (number) {
+            return Number(number)+7;
+        }
+
+        function multiplyTwoNumber (factor1, factor2) {
+            return Number(factor1) * Number(factor2);
+        }
+
+        function getCapitalizedWord (text) {
+            return text[0].toUpperCase() + text.slice(1);    
+        }
+
+        function getLastLetter (text) {
+            return text.at(-1);
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <h1>Test</h1>
+</body>
+</html>
