@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
 </head>
+
 <body>
     <script>
         const NUMBER_OF_POSSIBLE_CHOICES = 3;
@@ -15,11 +17,11 @@
             R: "S"
         }
         let score = {
-            "player": 0,
+            "user": 0,
             "computer": 0,
         }
 
-        while (scorePlayer <= 5 && scoreComputer <= 5) {
+        while (score["user"] < 5 && score["computer"] < 5) {
             let userChoice = prompt("Take your choice - Rock (R), Paper (P) or Scissors (S) (or choose any other letter to cancel)").toUpperCase();
 
             if (userChoice !== "R" && userChoice !== "P" && userChoice !== "S") {
@@ -31,35 +33,43 @@
 
             let winner = getWinner(userChoice, computerChoice);
 
-
-
             createWinMessage(winner);
+
+            updateScore(winner);
 
             function getRandomInt(integerNumber) {
                 return Math.floor(Math.random() * integerNumber);
             }
 
-            function getWinner (uChoice, cChoice) {
+            function getWinner(uChoice, cChoice) {
                 return uChoice === cChoice ? "draw" :
                     winMatrix[uChoice] === cChoice ? "user" :
-                    "computer"
+                        "computer"
             }
 
-            function updateScore {
-                
+            function updateScore(winner) {
+                score[winner] += 1;
+                if (score[winner] === 5) {
+                    endGame()
+                }
             }
 
-            function createWinMessage(playerWhoWon) {
-                
-                if (playerWhoWon === "draw") {
+            function createWinMessage(userWhoWon) {
+
+                if (userWhoWon === "draw") {
                     alert("It's a draw!");
-                } else if (playerWhoWon === "user") {
+                } else if (userWhoWon === "user") {
                     alert(`You win! The computer chose ${computerChoice} and you chose ${userChoice}`);
                 } else {
                     alert(`You lose - The computer chose ${computerChoice} and you chose ${userChoice}`);
                 }
             }
+            function endGame() {
+                alert(`The game is over! You had a score of ${score["user"]} and the computer had a score of ${score["computer"]}`)
+            }
+
         }
     </script>
 </body>
+
 </html>
