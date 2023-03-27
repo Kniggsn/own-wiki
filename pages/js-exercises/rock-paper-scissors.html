@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <script>
+        const NUMBER_OF_POSSIBLE_CHOICES = 3;
+        const winMatrix = {
+            P: "R",
+            S: "P",
+            R: "S"
+        }
+        let score = {
+            "player": 0,
+            "computer": 0,
+        }
+
+        while (scorePlayer <= 5 && scoreComputer <= 5) {
+            let userChoice = prompt("Take your choice - Rock (R), Paper (P) or Scissors (S) (or choose any other letter to cancel)").toUpperCase();
+
+            if (userChoice !== "R" && userChoice !== "P" && userChoice !== "S") {
+                alert(`Exited with UserChoice ${userChoice}`);
+                break;
+            }
+
+            let computerChoice = ["R", "P", "S"][getRandomInt(NUMBER_OF_POSSIBLE_CHOICES)];
+
+            let winner = getWinner(userChoice, computerChoice);
+
+
+
+            createWinMessage(winner);
+
+            function getRandomInt(integerNumber) {
+                return Math.floor(Math.random() * integerNumber);
+            }
+
+            function getWinner (uChoice, cChoice) {
+                return uChoice === cChoice ? "draw" :
+                    winMatrix[uChoice] === cChoice ? "user" :
+                    "computer"
+            }
+
+            function updateScore {
+                
+            }
+
+            function createWinMessage(playerWhoWon) {
+                
+                if (playerWhoWon === "draw") {
+                    alert("It's a draw!");
+                } else if (playerWhoWon === "user") {
+                    alert(`You win! The computer chose ${computerChoice} and you chose ${userChoice}`);
+                } else {
+                    alert(`You lose - The computer chose ${computerChoice} and you chose ${userChoice}`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
