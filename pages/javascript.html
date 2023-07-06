@@ -203,9 +203,32 @@
         </ul>
     </div>
     <hr>
-    <h2>Developer Tools</h2>
+    <h2>Manipulating the DOM</h2>
     <div class="paragraph">
-        <ul>Chrome Menu --> More Tools --> Developer Tools</ul>
+        <h3>DOM-Manipulation</h3>
+        <ul>
+            <li> Target Nodes:
+                <ul>
+                    <li>div.display --> div element with display class</li>
+                    <li>.display --> every element with display class</li>
+                    <li>#container > .display --> an element with display-class that is inside an element with the ID "cointainer"</li>
+                    <li>container.firstElementChild --> selects the first Element Child of container</li>
+                </ul>
+            </li>
+            <li>
+                DOM Methods
+                <ul>
+                    <li>element.querySelector(selector) --> returns reference to first match of selector</li>
+                    <li>element.querySelectorAll(selectors) --> returns a "nodelist" (not exactly an array) containing references to all the matches of the selectors</li>
+                    <li>document.createElement(tagName, [options]) --> creates new element of tagType tagName e.g. const div = document.createElement("div"); --> does not put the element into the dom yet!</li>
+                    <li>parentNode.appendChild(childNode) --> appends childNode at the last child of the parent</li>
+                    <li>parentNode.insertBefore(newNode, referenceNode) --> inserts new node into parent node before the reference</li>
+                    <li>parentNode.removeChild(child) --> removes child from parentNode on the DOM and returns a reference to child</li>
+                    <li>nodeReference.stlye.color = blue --> adds the indicated style rule</li>
+                    <li>nodeReference.style.cssText = "color: blue; background: white"</li>
+                    <li>nodeReference.setAttribute("style", "color: blue; background: white;")</li>
+                </ul>
+        </ul>
     </div>
 
 </body>
