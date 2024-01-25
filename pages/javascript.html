@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/js-file.js" defer></script> 
     <link rel="stylesheet" href="../CSS/styles.css">
     <title>Javascript</title>
 
@@ -217,7 +218,7 @@
             </li>
             <li>
                 DOM Methods
-                <ul>
+                <ul id="dom-methods-list">
                     <li>element.querySelector(selector) --> returns reference to first match of selector</li>
                     <li>element.querySelectorAll(selectors) --> returns a "nodelist" (not exactly an array) containing references to all the matches of the selectors</li>
                     <li>document.createElement(tagName, [options]) --> creates new element of tagType tagName e.g. const div = document.createElement("div"); --> does not put the element into the dom yet!</li>
@@ -227,7 +228,28 @@
                     <li>nodeReference.stlye.color = blue --> adds the indicated style rule</li>
                     <li>nodeReference.style.cssText = "color: blue; background: white"</li>
                     <li>nodeReference.setAttribute("style", "color: blue; background: white;")</li>
+                    <li>Note that for kebab-cased CSS rules from JS you'll need to use camelCase or bracket notation, e.g. nodeReference.style.background-color does not word; .backgroundColor and style["background-color"] or even .cssText = "background-color: white" does work.</li>
+                    <li>nodeReference.setAttribute("id", "theDiv") --> if "id" exists, update it to theDiv or create an id with value div</li>
+                    <li>referenceNode.getAttribute("id")</li>
+                    <li>referenceNode.removeAttribute("id")</li>
+                    <li>referenceNode.classList.add("new") --> adds class "new" to referenceNode</li>
+                    <li>referenceNode.classList.remove("new")</li>
+                    <li>referenceNode.classList.toggle("new")</li>
+                    <li>referenceNode.textContent = "Hello World"</li>
+                    <li>div.innerHTLM = "<span>Hello World</span>"</li>
+                    <li id="javascript-test">Test</li>
+                </ul> </li>
+            <li>
+                Events
+                <ul>
+                    <li>Events are things that happen on the webpage like clicks</li>
+                    <li>There are basically three ways of listening to events:</li>
+                    <li>By adding the "onclick" attribute directly to our html (not ideal):</li>
+                    <li><button onclick="alert('Hello World')">Click me!</button></li>
+                    <li>By giving the button a id and doing the work with javascript</li>
+                    <li><button id="btn">Click me too!</button></li>
                 </ul>
+            </li>
         </ul>
     </div>
 
