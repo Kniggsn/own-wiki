@@ -34,5 +34,29 @@ filledDivElement.appendChild(paragraph);
 
 container.appendChild(filledDivElement);
 
-const btn = document.querySelector("#btn");
-btn.onclick = () => alert("Hello world!");
+//const btn = document.querySelector("#btn");
+//btn.onclick = () => alert("Hello world!");
+
+const btn2 = document.querySelector("#btn2");
+//btn2.addEventListener("click", () => {
+//   alert("Hello World");
+//});
+btn2.addEventListener("click", function(e) {
+    e.target.style.backgroundColor = "blue";
+});
+
+//const btn3 = document.querySelector("#btn3");
+//btn3.addEventListener("click", alertSomething);
+
+const buttons = document.querySelectorAll("button")
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => alertSomething("Hallo"));
+})
+
+function alertSomething(message) {
+    alert(message);
+}
+
+const testline = document.querySelector("#testline");
+testline.addEventListener("dblclick", () => alert("Du hast gedoppelklickt!"))
