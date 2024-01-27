@@ -1,0 +1,45 @@
+* {
+    font-family: "Century" Helvetica sans-serif;
+    margin: 20
+}
+
+html {
+    background-color: black;
+    color: #E4E6EB;
+}
+
+h1, div, p {
+    text-align: center;
+}
+
+button {
+    padding: 16px;
+    margin: 12px;
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #18191A;
+    border-left: solid 1px #3A3B3C;
+    border-right: solid 1px #3A3B3C;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
